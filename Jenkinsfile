@@ -2,20 +2,17 @@ pipeline {
 	agent any
 	
 	stages {
-		stage("Build") {
+		stage("Terraform init") {
 			steps {
-				echo "Building the code"
+				sh "terraform init"
 			}
 		}	
-		stage("Test") {
+		stage("Terraform plan") {
 			steps {
-				echo "Testing the code"
+				sh "terraform plan"
 			}
 		}
-		stage("Deploy") {
-			steps {
-				echo "Deploy the code"
-			}
-		}
+		
 	}
-}
+}	
+	
