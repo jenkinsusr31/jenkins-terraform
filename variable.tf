@@ -1,5 +1,5 @@
 variable "bukt_name" {
-  default = "My Jenkins-test-bucket"
+  default = "terraform-s3-test"
 }
 variable "region" {
   default = "us-west-2"
