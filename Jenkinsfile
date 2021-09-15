@@ -15,11 +15,15 @@ pipeline {
 				sh "terraform plan"
 			}
 		}
-		
+		stage("Terraform apply") {
+			steps {
+				sh "terraform apply"
+			}	
+		}
 	}
 }	
 			
 def getTeeraformPath(){
 	def tfHome = tool name: 'terraform-1.6', type: 'terraform'
 	return tfHome
-}
+}	
