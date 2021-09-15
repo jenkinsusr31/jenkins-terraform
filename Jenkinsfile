@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-      PATH ="$(PATH):${getTeeraformPath()}"
+      PATH = "${PATH}:${getTeeraformPath()}"
     }
 
 	stages {
